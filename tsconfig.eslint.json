@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "src",
+    "lint-staged.config.js",
+    "next.config.js",
+    "tailwind.config.ts",
+    "postcss.config.js",
+    ".eslintrc.js",
+    ".prettierrc.js"
+  ]
+}
