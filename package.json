@@ -10,6 +10,7 @@
     "format:fix": "prettier --write .",
     "lint:check": "eslint ./ --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint ./ --fix --ext .js,.jsx,.ts,.tsx",
+    "type:check": "tsc --noEmit",
     "prepare": "husky install",
     "start": "next start"
   },
@@ -18,8 +19,8 @@
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.15",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.0.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "lucide-react": "^0.276.0",
     "next": "^13.5.6",
     "postcss": "8.4.29",
@@ -31,6 +32,7 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
+    "@types/lint-staged": "^13.3.0",
     "@typescript-eslint/eslint-plugin": "^6.6.0",
     "@typescript-eslint/parser": "^6.6.0",
     "eslint": "^8.2.0",

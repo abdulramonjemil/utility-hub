@@ -1,10 +1,10 @@
 import type { Metadata } from "next"
 import localFont from "next/font/local"
-import { APP_TAGLINE, APP_TITLE } from "@/shared/brand"
+import { APP_NAME, APP_TAGLINE } from "@/shared/brand"
 
 import "./globals.css"
 
-const gtWalsheim = localFont({
+const gtWalsheimPro = localFont({
   src: [
     {
       path: "../fonts/gt-walsheim-pro/GTWalsheimPro-Regular.ttf",
@@ -21,7 +21,7 @@ const gtWalsheim = localFont({
 })
 
 export const metadata: Metadata = {
-  title: `${APP_TITLE.default} — ${APP_TAGLINE.default}`,
+  title: `${APP_NAME.default} — ${APP_TAGLINE.default}`,
   description: `${APP_TAGLINE.default}`
 }
 
@@ -32,7 +32,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${gtWalsheim.variable} ${gtWalsheim.className}`}>
+      <body className={`${gtWalsheimPro.variable} ${gtWalsheimPro.className}`}>
         {children}
       </body>
     </html>

@@ -4,7 +4,7 @@
  * Specifying this as an object allows us to create variations of it, as
  * different formats may be needed at different places on the app.
  */
-export const APP_TITLE = {
+export const APP_NAME = {
   default: "UtilityHub"
 } as const
 
