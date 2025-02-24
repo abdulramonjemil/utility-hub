@@ -23,6 +23,8 @@
     "**/*.ts",
     "**/*.js",
     "**/*.tsx",
+    ".eslintrc.js",
+    ".prettierrc.js",
     ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules"]

@@ -32,7 +32,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${gtWalsheimPro.variable} ${gtWalsheimPro.className}`}>
+      <body
+        className={`${gtWalsheimPro.variable} ${gtWalsheimPro.className}`}
+        suppressHydrationWarning
+      >
         {children}
       </body>
     </html>

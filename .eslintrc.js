@@ -20,9 +20,11 @@ module.exports = {
   },
 
   plugins: ["@typescript-eslint", "eslint-comments"],
+  reportUnusedDisableDirectives: true,
 
   rules: {
     "import/prefer-default-export": "off",
+    "react/destructuring-assignment": "off",
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
     "react/require-default-props": "off",
