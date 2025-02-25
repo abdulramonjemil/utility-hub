@@ -82,3 +82,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .app-container {
+    @apply md:container md:max-w-[768px];
+  }
+}

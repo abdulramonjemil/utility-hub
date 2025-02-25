@@ -12,6 +12,11 @@ const gtWalsheimPro = localFont({
       style: "normal"
     },
     {
+      path: "../fonts/gt-walsheim-pro/GTWalsheimPro-Medium.ttf",
+      weight: "500",
+      style: "normal"
+    },
+    {
       path: "../fonts/gt-walsheim-pro/GTWalsheimPro-Bold.ttf",
       weight: "700",
       style: "normal"
