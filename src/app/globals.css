@@ -87,4 +87,17 @@
   .app-container {
     @apply md:container md:max-w-[768px];
   }
+
+  /* To remove arrow from inputs particularly type number */
+  .spinless-input::-webkit-outer-spin-button,
+  .spinless-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  .spinless-input {
+    appearance: textfield;
+    -moz-appearance: textfield;
+  }
 }

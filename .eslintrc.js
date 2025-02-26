@@ -23,12 +23,20 @@ module.exports = {
   reportUnusedDisableDirectives: true,
 
   rules: {
+    "arrow-body-style": "off",
     "jsx-a11y/anchor-is-valid": [
       "error",
       {
         components: ["Link"],
         specialLink: ["hrefLeft", "hrefRight"],
         aspects: ["noHref", "preferButton"]
+      }
+    ],
+
+    "jsx-a11y/label-has-associated-control": [
+      "error",
+      {
+        assert: "either"
       }
     ],
 
