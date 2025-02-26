@@ -69,7 +69,7 @@ export default function WithdrawalPage() {
 
             <form>
               <div className="space-y-6">
-                <div>
+                <div className="rounded-md bg-white p-4 shadow-[rgba(0,0,0,0.2)_0px_0px_2px_1px]">
                   <label
                     className="mb-2 block text-sm text-gray-700"
                     htmlFor={inputs.withdrawalAmount.id}
