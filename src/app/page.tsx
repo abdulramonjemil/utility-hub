@@ -13,7 +13,7 @@ import {
 } from "lucide-react"
 
 import { APP_NAME, APP_TAGLINE } from "@/shared/brand"
-import { dashboardRoute } from "@/shared/routes"
+import { dashboardRoute, homeRoute } from "@/shared/routes"
 
 import { type ReactNode } from "react"
 import Image, { type StaticImageData } from "next/image"
@@ -21,14 +21,12 @@ import Image, { type StaticImageData } from "next/image"
 import AppIcon from "@/images/brand/icon.svg"
 import AppIconWhite from "@/images/brand/icon-white.svg"
 import CoinHolderSVG from "@/images/illustrations/coin-holder.svg"
+import Link from "next/link"
 
 const sections = {
-  header: { id: "header" },
-  hero: { id: "hero" },
   services: { id: "services" },
   referralProgram: { id: "referral-program" },
-  getStarted: { id: "get-started" },
-  footer: { id: "footer" }
+  getStarted: { id: "get-started" }
 } as const
 
 function ServiceCard(props: {
@@ -54,12 +52,9 @@ function ServiceCard(props: {
 export default function LandingPage() {
   return (
     <div className="min-h-screen text-gray-800">
-      <header
-        id={sections.header.id}
-        className="sticky top-0 border-b border-gray-200 bg-white py-4 text-gray-800"
-      >
+      <header className="sticky top-0 border-b border-gray-200 bg-white py-4 text-gray-800">
         <div className="flex items-center justify-between px-4 md:container md:mx-auto">
-          <a href="/" className="flex items-center space-x-2">
+          <Link href={homeRoute()} className="flex items-center space-x-2">
             <Image
               alt={`${APP_NAME.default} Icon`}
               className="h-8 w-8"
@@ -67,7 +62,7 @@ export default function LandingPage() {
               src={AppIcon as StaticImageData}
             />
             <h1 className="text-2xl font-bold">{APP_NAME.default}</h1>
-          </a>
+          </Link>
           <nav className="hidden md:block">
             <ul className="flex space-x-6">
               <li>
@@ -97,13 +92,13 @@ export default function LandingPage() {
             </ul>
           </nav>
           <Button className="rounded-full" asChild>
-            <a href={dashboardRoute()}>Dashboard</a>
+            <Link href={dashboardRoute()}>Dashboard</Link>
           </Button>
         </div>
       </header>
 
       <main>
-        <section id={sections.hero.id}>
+        <section>
           <div className="flex min-h-screen items-center py-20">
             <div className="mx-auto border-red-50 px-4 text-center md:container">
               <h2 className="mb-4 mt-[-48px] text-4xl font-bold text-gray-800 md:text-5xl">
@@ -114,7 +109,7 @@ export default function LandingPage() {
                 hassle-free with our easy-to-use platform
               </p>
               <Button asChild className="rounded-full px-8 py-6 text-lg">
-                <a href={`#${sections.hero.id}`}>
+                <a href="#">
                   Get Started <ArrowRightIcon className="ml-2 inline-block" />
                 </a>
               </Button>
@@ -208,7 +203,7 @@ export default function LandingPage() {
         </section>
       </main>
 
-      <footer id={sections.footer.id} className="bg-gray-800 py-6 text-white">
+      <footer className="bg-gray-800 py-6 text-white">
         <div className="mx-auto px-4 md:container">
           <div className="grid items-start justify-center gap-4 md:grid-cols-3 md:justify-between md:gap-8">
             <div className="mx-auto flex items-center space-x-1 md:mx-0">
@@ -234,28 +229,28 @@ export default function LandingPage() {
               </h4>
               <div className="grid justify-center gap-2 md:grid-cols-2 md:justify-start">
                 <a
-                  href={`#${sections.footer.id}`}
+                  href="#"
                   className="text-sm text-gray-400 hover:text-gray-300"
                 >
                   About
                 </a>
 
                 <a
-                  href={`#${sections.footer.id}`}
+                  href="#"
                   className="text-sm text-gray-400 hover:text-gray-300"
                 >
                   Services
                 </a>
 
                 <a
-                  href={`#${sections.footer.id}`}
+                  href="#"
                   className="text-sm text-gray-400 hover:text-gray-300"
                 >
                   Contact
                 </a>
 
                 <a
-                  href={`#${sections.footer.id}`}
+                  href="#"
                   className="text-sm text-gray-400 hover:text-gray-300"
                 >
                   FAQ
@@ -267,34 +262,22 @@ export default function LandingPage() {
                 Connect With Us
               </h4>
               <div className="flex space-x-4">
-                <a
-                  href={`#${sections.footer.id}`}
-                  className="text-gray-400 hover:text-gray-300"
-                >
+                <a href="#" className="text-gray-400 hover:text-gray-300">
                   <InstagramIcon className="h-6 w-6" />
                   <span className="sr-only">Instagram</span>
                 </a>
 
-                <a
-                  href={`#${sections.footer.id}`}
-                  className="text-gray-400 hover:text-gray-300"
-                >
+                <a href="#" className="text-gray-400 hover:text-gray-300">
                   <FacebookIcon className="h-6 w-6" />
                   <span className="sr-only">Facebook</span>
                 </a>
 
-                <a
-                  href={`#${sections.footer.id}`}
-                  className="text-gray-400 hover:text-gray-300"
-                >
+                <a href="#" className="text-gray-400 hover:text-gray-300">
                   <TwitterIcon className="h-6 w-6" />
                   <span className="sr-only">Twitter</span>
                 </a>
 
-                <a
-                  href={`#${sections.footer.id}`}
-                  className="text-gray-400 hover:text-gray-300"
-                >
+                <a href="#" className="text-gray-400 hover:text-gray-300">
                   <LinkedinIcon className="h-6 w-6" />
                   <span className="sr-only">LinkedIn</span>
                 </a>
