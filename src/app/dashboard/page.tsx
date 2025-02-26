@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import Link from "next/link"
 import Image, { type StaticImageData } from "next/image"
 import {
   BellIcon,
@@ -33,15 +34,15 @@ export default function DashboardPage() {
       <header className="sticky top-0 bg-white">
         <div className="app-container mx-auto px-4">
           <div className="flex items-center justify-between py-4">
-            <a className="flex items-center space-x-2" href="/">
+            <Link className="flex items-center space-x-2" href="/">
               <Image
                 alt={`${APP_NAME.default} Icon`}
                 className="h-8 w-8"
                 unoptimized
                 src={AppIcon as StaticImageData}
               />
-              <h1 className="text-xl font-bold">{APP_NAME.default}</h1>
-            </a>
+              <div className="text-xl font-bold">{APP_NAME.default}</div>
+            </Link>
             <div className="flex gap-2">
               <Button className="h-10 w-10 rounded-full" variant="ghost">
                 <BellIcon className="h-5 w-5 text-gray-700" />
@@ -186,9 +187,9 @@ export default function DashboardPage() {
                     variant="outline"
                     size="sm"
                   >
-                    <a href={withdrawalRoute()}>
+                    <Link href={withdrawalRoute()}>
                       Withdraw <LandmarkIcon className="h-4 w-4" />
-                    </a>
+                    </Link>
                   </Button>
                 </div>
               </div>
