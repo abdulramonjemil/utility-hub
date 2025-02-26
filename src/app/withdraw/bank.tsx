@@ -38,7 +38,7 @@ interface Bank {
 /**
  * Simple object to provide basic caching for the fetch()
  */
-const bankInfoCache: { value: Bank[] | null } = { value: null }
+const banksCache: { value: Bank[] | null } = { value: null }
 
 function BankSelectionArea({
   handleBankSelection
@@ -49,8 +49,8 @@ function BankSelectionArea({
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<unknown>(null)
 
-  if (isLoading && bankInfoCache.value !== null) {
-    setBanks(bankInfoCache.value)
+  if (isLoading && banksCache.value !== null) {
+    setBanks(banksCache.value)
     setIsLoading(false)
     setError(null)
   }
@@ -66,7 +66,7 @@ function BankSelectionArea({
       if (!Array.isArray(data)) {
         throw new Error("Unexpected API result")
       }
-      bankInfoCache.value = data as Bank[]
+      banksCache.value = data as Bank[]
       setBanks(data as Bank[])
       setIsLoading(false)
     })().catch((e) => {
@@ -133,7 +133,7 @@ function BankSelectionArea({
   )
 }
 
-export function AccountConfigurationArea() {
+export function BankAccountConfigurationArea() {
   const [selectedBank, setSelectedBank] = useState<Bank | null>(null)
   const [dialogIsOpen, setDialogIsOpen] = useState(false)
 

@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import Link from "next/link"
 import Image, { StaticImageData } from "next/image"
 import { ArrowLeftIcon, LandmarkIcon } from "lucide-react"
 
@@ -9,7 +10,7 @@ import { dashboardRoute, homeRoute } from "@/shared/routes"
 
 import ManAvatar from "@/images/man.png"
 
-import { AccountConfigurationArea } from "./account"
+import { BankAccountConfigurationArea } from "./bank"
 import { inputs } from "./shared"
 
 export const metadata: Metadata = {
@@ -29,20 +30,20 @@ export default function WithdrawalPage() {
                 variant="outline"
                 size="icon"
               >
-                <a href={dashboardRoute()}>
+                <Link href={dashboardRoute()}>
                   <ArrowLeftIcon className="h-4 w-4" />
-                </a>
+                </Link>
               </Button>
             </div>
             <div className="flex justify-center">
-              <a href={homeRoute()}>
+              <Link href={homeRoute()}>
                 <Image
                   alt={`${APP_NAME.default} Icon`}
                   className="h-20 w-20"
                   unoptimized
                   src={AppGhostIcon as StaticImageData}
                 />
-              </a>
+              </Link>
             </div>
             <div>
               <Button className="rounded-full p-0" variant="ghost" size="icon">
@@ -89,7 +90,7 @@ export default function WithdrawalPage() {
                   </p>
                 </div>
 
-                <AccountConfigurationArea />
+                <BankAccountConfigurationArea />
 
                 <div>
                   <Button
